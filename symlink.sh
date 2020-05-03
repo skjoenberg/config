@@ -12,3 +12,6 @@ copy xbindkeys/.xbindkeysrc ~/.xbindkeysrc
 copy bspwm/bspwmrc ~/.config/bspwm/bspwmrc
 copy sxhkd/sxhkdrc ~/.config/sxhkd/sxhkdrc
 copy polybar/config ~/.config/polybar/config
+copy fish/config.fish ~/.config/fish/config.fish
+create_symlink tmux/.tmux.conf ~/.tmux.conf
+

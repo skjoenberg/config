@@ -11,3 +11,4 @@ copy () {
 copy xbindkeys/.xbindkeysrc ~/.xbindkeysrc
 copy bspwm/bspwmrc ~/.config/bspwm/bspwmrc
 copy sxhkd/sxhkdrc ~/.config/sxhkd/sxhkdrc
+copy polybar/config ~/.config/polybar/config

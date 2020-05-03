@@ -1,15 +1,10 @@
-#
-# wm independent hotkeys
-#
-
 # terminal emulator
 ctrl + alt + f
 	dmenu_run
 
 # make sxhkd reload its configuration files:
-super + Escape
+ctrl + z ; ctrl + r
 	pkill -USR1 -x sxhkd
-
 #
 # bspwm hotkeys
 #
@@ -19,63 +14,27 @@ super + alt + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
-ctrl + q ; ctrl + k
+ctrl + z ; ctrl + k
 	bspc node -{c,k}
-
-# alternate between the tiled and monocle layout
-super + m
-	bspc desktop -l next
-
-#
-# state/flags
-#
-
-# set the window state
-super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
-
-# set the node flags
-super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
 
 #
 # focus/swap
 #
 
 # focus the node in the given direction
-ctrl + q ; ctrl + {_,shift + }{b,n,p,f}
+ctrl + z ; ctrl + {_,shift + }{b,n,p,f}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the next/previous node in the current desktop
-ctrl + q ; ctrl + {w,e}
+ctrl + z ; ctrl + {w,e}
 	bspc node -f {next,prev}.local
 
 # focus or send to the given desktop
 ctrl + alt + {_,shift + }{1,2,3,q,w,e,r}
-	bspc {desktop -f,node -d} '^{1-7}'
+	bspc {desktop -f,node -d} '{www,communication,editor,media,terminal,random,whatever}'
 
-ctrl + q ; Escape
+ctrl + z ; Escape
 	echo ""
-
-#
-# preselect
-#
-
-# preselect the direction
-super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
-
-# preselect the ratio
-super + ctrl + {1-9}
-	bspc node -o 0.{1-9}
-
-# cancel the preselection for the focused node
-super + ctrl + space
-	bspc node -p cancel
-
-# cancel the preselection for the focused desktop
-super + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
 # move/resize

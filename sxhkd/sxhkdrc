@@ -20,6 +20,11 @@ ctrl + z ; ctrl + k
 #
 # focus/swap
 #
+ctrl + z ; ctrl + q
+	sh ~/.config/sxhkd/show_all_windows_in_desktop.sh
+
+ctrl + z ; ctrl + d
+	bspc node focused -g hidden=on
 
 # focus the node in the given direction
 ctrl + z ; ctrl + {_,shift + }{b,n,p,f}

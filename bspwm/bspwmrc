@@ -25,7 +25,7 @@ bspc config gapless_monocle      true
 
 bspc rule -a Brave-browser desktop='www'
 bspc rule -a Prospect Mail desktop='communication'
-bspc rule -a microsoft teams - preview desktop='communication'
-bspc rule -a code desktop='editor'
-bspc rule -a spotify desktop='media'
-bspc rule -a termite desktop='terminal'
+bspc rule -a Microsoft Teams - preview desktop='communication'
+bspc rule -a Code desktop='editor'
+bspc rule -a Spotify desktop='media'
+bspc rule -a Termite desktop='terminal'

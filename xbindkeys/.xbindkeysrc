@@ -46,7 +46,7 @@
 #"xterm"
 #  c:41 + m:0x4
 #"xdotool sleep 0.01 key Escape"
-"xdotool getwindowfocus key --clearmodifiers Escape"
+"xdotool keyup g key --clearmodifiers Escape"
    Control+g
 
 # specify a mouse button

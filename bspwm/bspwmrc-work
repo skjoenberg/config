@@ -1,0 +1,33 @@
+#! /bin/sh
+
+polybar example &
+polybar example2 &
+compton &
+sxhkd &
+xbindkeys &
+feh --bg-scale Pictures/bg.jpg &
+xset +fp /home/sebastian/.fonts &
+xset fp rehash &
+wmname LG3D &
+setxkbmap us --option ctrl:nocaps &
+
+bspc config border_width         1
+bspc config window_gap         	 5
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Brave-browser desktop='www'
+bspc rule -a Prospect Mail desktop='communication'
+bspc rule -a Microsoft Teams - preview desktop='communication'
+bspc rule -a Code desktop='editor'
+bspc rule -a Spotify desktop='media'
+bspc rule -a Termite desktop='terminal'
+
+xrandr --output DP-1-1 --left-of DP-1-2 &
+xrandr --output eDP-1 --below DP-1-1 &
+
+bspc monitor DP-1-1 -d www communication editor media terminal random
+bspc monitor DP-1-2 -d whatever
+bspc monitor eDP-1 -d  whatever2

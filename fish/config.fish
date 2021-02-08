@@ -43,3 +43,16 @@ end
 
 # Clear the terminal
 eval 'clear'
+
+set PATH $PATH ~/.local/bin ~/.jdks/corretto-1.8.0_275/bin ~/.jdks/corretto-1.8.0_275
+
+#alias java "~/.jdks/corretto-1.8.0_275/bin/java"
+
+alias wip "git add . && git commit --no-verify -m \"wip\""
+
+alias g "git"
+
+function cd 
+	builtin cd "$argv"
+	ls
+end

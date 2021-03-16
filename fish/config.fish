@@ -52,7 +52,12 @@ alias wip "git add . && git commit --no-verify -m \"wip\""
 
 alias g "git"
 
+alias mk "microk8s.kubectl"
+alias mhelm "microk8s.helm3"
+alias k "kubectl"
+
 function cd 
 	builtin cd "$argv"
 	ls
 end
+

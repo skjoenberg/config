@@ -1,31 +1,48 @@
 #! /bin/sh
 
-xrandr --output eDP-1 --right-of HDMI-1 &
-polybar example &
-polybar example2 &
+# Setup screens
+xrandr --output DP-2 --right-of HDMI-1 &
+xrandr --output eDP-1 --below DP-2 &
+
+# Startup programs
+brave-browser &
+gnome-terminal &
+slack &
+
+# Setup/Settings
 compton &
-sxhkd &
-xbindkeys &
-feh --bg-scale Pictures/bg.jpg &
+xset r rate 190 35 & # Key repeat for vim
+feh --bg-fill Pictures/bg.jpg &
+polybar -c ~/config/polybar/config example &
+setxkbmap us --option ctrl:nocaps &
 
-xset +fp /home/sebastian/.fonts &
-xset fp rehash &
-
-
-
-bspc monitor eDP-1 -d whatever 
-bspc monitor HDMI-1 -d www communication editor media terminal random
+# Fix for intelliJ
+wmname LG3D &
 
 bspc config border_width         1
-bspc config window_gap         	 5 
+bspc config window_gap         	 5
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
+# Window rules
 bspc rule -a Brave-browser desktop='www'
+
 bspc rule -a Prospect Mail desktop='communication'
 bspc rule -a Microsoft Teams - preview desktop='communication'
+bspc rule -a Thunderbird desktop='communication'
+
 bspc rule -a Code desktop='editor'
+
 bspc rule -a Spotify desktop='media'
+bspc rule -a Slack desktop='media'
+bspc rule -a Signal desktop='media'
+
+bspc rule -a Gnome-terminal desktop='terminal'
 bspc rule -a Termite desktop='terminal'
+
+# Monitor setup
+bspc monitor DP-2 -d www communication editor media terminal random
+bspc monitor HDMI-1 -d whatever
+bspc monitor eDP-1 -d whatevertwo

@@ -35,8 +35,8 @@ ctrl + z ; ctrl + {w,e}
 	bspc node -f {next,prev}.local
 
 # focus or send to the given desktop
-ctrl + alt + {_,shift + }{1,2,3,q,w,e,r}
-	bspc {desktop -f,node -d} '{www,communication,editor,media,terminal,random,whatever}'
+ctrl + alt + {_,shift + }{1,2,3,q,w,e,r,t}
+	bspc {desktop -f,node -d} '{www,communication,editor,media,terminal,random,whatever,whatevertwo}'
 
 ctrl + z ; Escape
 	echo ""

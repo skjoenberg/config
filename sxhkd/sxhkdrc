@@ -36,7 +36,7 @@ ctrl + z ; ctrl + {w,e}
 
 # focus or send to the given desktop
 ctrl + alt + {_,shift + }{1,2,3,q,w,e,r,t}
-	bspc {desktop -f,node -d} '{www,communication,editor,media,terminal,random,whatever,whatevertwo}'
+	bspc {desktop -f,node -d} '{www,mail,editor,communication,terminal,random,whatever,whatevertwo}'
 
 ctrl + z ; Escape
 	echo ""

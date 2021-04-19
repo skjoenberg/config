@@ -1,0 +1,28 @@
+[user]
+	email = sebastian.andersen@deondigital.com
+	name = Sebastian Andersen
+[core]
+	editor = nvim
+[push]
+	default = current
+[help]
+	autocorrect = 2
+[alias]
+	ignore = update-index --skip-worktree
+	unignore = update-index --no-skip-worktree
+	ignored = !git ls-files -v | grep \"^S\"
+	re = rebase
+	rei = rebase -i
+	cm = commit -m
+	ca = commit --amend --no-edit
+	co = checkout
+	cl = clean -fd
+	a = add
+	s = status
+	l = log
+	p = pull --rebase
+	ps = push
+	ps = push -f
+	undo = reset HEAD@{1}
+	puf = !git pull --rebase && git push -f
+	rec = rebase --continue

@@ -25,7 +25,7 @@ end
 
 # Add private key
 function sl
-        ssh-add /home/sebastian/.ssh/sebastian_priv.key
+        ssh-add /home/sebastian/.ssh/id_rsa
 end
 
 # Open pdf
@@ -56,7 +56,7 @@ alias mk "microk8s.kubectl"
 alias mhelm "microk8s.helm3"
 alias k "kubectl"
 
-function cd 
+function cd
 	builtin cd "$argv"
 	ls
 end
